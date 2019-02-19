@@ -8,11 +8,11 @@
   - name: IP
     lineinfile: path=/etc/ntp.conf regexp='^#restrict' line='restrict 192.168.100.0 mask 255.255.255.0 nomodify notrap'
   - name: IP server 0
-    lineinfile: path=/etc/ntp.conf regexp='^server 0' line='server 2.th.pool.ntp.org iburst'
+    lineinfile: path=/etc/ntp.conf regexp='^server 0' line='192.168.100.11'
   - name: IP server 1
-    lineinfile: path=/etc/ntp.conf regexp='^server 1' line='server 0.asia.pool.ntp.org iburst'
+    lineinfile: path=/etc/ntp.conf regexp='^server 1' line=''
   - name: IP server 2
-    lineinfile: path=/etc/ntp.conf regexp='^server 2' line='server 2.asia.pool.ntp.org iburst'
+    lineinfile: path=/etc/ntp.conf regexp='^server 2' line=''
   - name: IP server 3
     lineinfile: path=/etc/ntp.conf regexp='^server 3' line=''
   - name: Install firewalld
